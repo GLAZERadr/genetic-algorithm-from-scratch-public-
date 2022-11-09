@@ -105,8 +105,8 @@ def next_generation(gen):
 
 def print_generasi(generasi):
     for i in range(len(generasi)):
-        print("\"{}\" ({:5f},{:5f}) : {}".format(generasi[i], decode(
-            generasi[i])[0], decode(generasi[i])[1], fitness(generasi[i])))
+        #output value populasi, kromosom, x, y, dan fitness
+        print(generasi, generasi[i], decode(generasi[i])[0], decode(generasi[i])[1], fitness(generasi[i]), sep = '\n')
 
 
 #fungsi main untuk kalkulasi banyaknya generasi dan juga mengeluarkan output individu terbaik 
