@@ -103,7 +103,7 @@ def next_generation(gen):
 
     return result
 
-def print_generasi(generasi):
+def output(generasi):
     for i in range(len(generasi)):
         #output value populasi, kromosom, x, y, dan fitness
         print(generasi, generasi[i], decode(generasi[i])[0], decode(generasi[i])[1], fitness(generasi[i]), sep = '\n')
@@ -114,7 +114,7 @@ def main():
     generasi = []
     generasi = generate_populasi(tot_pop, len_chromosom)
     print("Generasi 1")
-    print_generasi(generasi)
+    output(generasi)
     best = generasi.sort(key=lambda x: fitness(x), reverse=True)
     best = generasi[0]
 
@@ -123,7 +123,7 @@ def main():
     for i in range(iterasi):
         generasi = next_generation(generasi)
         print("Generasi {}".format(i))
-        print_generasi(generasi)
+        output(generasi)
 
     print("-"*50)
     print("berhenti di generasi ke {}".format(i))
